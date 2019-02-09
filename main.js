@@ -1,22 +1,12 @@
-function validateForm() {
-    var name = document.forms["form"]["name"];
-    var email = document.forms["form"]["email"];
-    var age = document.forms["form"]["age"];
+function validateForm(){
+    
+var name = document.getElementById("name");
 
-    if (name.value == ""){
-        alert("please enter your name");
-        name.focus();
-        return false;
-    }
-    if (email.value == ""){
-        alert("please enter your email");
-        email.focus();
-        return false;
-    }
-    if (age.value == ""){
-        alert("please enter your age");
-        age.focus();
-        return false;
-    }
+name.addEventListener("input", function (event) {
+  if (name.validity.typeMismatch) {
+    name.setCustomValidity("pleaase, enter your name");
+  } else {
+    name.setCustomValidity("");
+  }
+});
 }
-

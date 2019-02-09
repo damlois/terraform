@@ -24,9 +24,10 @@
           <diV><p class="head">REGISTER</p></div>
           <div id="top">Already Registered? <a href="sign-in.html">Sign In</a></div>
           <form name="form" onsubmit="validateForm()">
-            <input type="text" name="name" placeholder="Name"><br/><br/>
-            <input type="email" name="email" placeholder="Email"><br/><br/>
-            <input type="number" name="age" placeholder="Age"><br/><br/>
+            <input type="text" id="name" name="name" placeholder="Name" required><br/><br/>
+            <input type="email" id="email" name="email" placeholder="Email" required pattern="\A[\w!#$%&'*+/=?`{|}~^-]+(?:\.[\w!#$%&'*+/=?`{|}~^-]+)*@↵
+            (?:[A-Z0-9-]+\.)+[A-Z]{2,6}\Z"><br/><br/>
+            <input type="number" id="age" name="age" placeholder="Age" required><br/><br/>
             <input type="submit" class="submit" value="Sign Up"> 
           </form>         
          </div>
